@@ -1,0 +1,110 @@
+\documentclass[10.5pt,letterpaper]{article}
+
+% --- ATS-safe text extraction ---
+\usepackage{cmap}        % ensures glyphs map back to correct Unicode text when parsed/copy-pasted
+\usepackage[T1]{fontenc} % avoids broken ligature extraction (e.g. "ffi") common in ATS parsers
+\usepackage[utf8]{inputenc}
+
+\usepackage[
+left=0.65in,
+right=0.65in,
+top=0.3in,
+bottom=0.3in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue, breaklinks=true}
+\usepackage{xurl} % allows long URLs to wrap at any character instead of overflowing the margin
+\usepackage{titlesec}
+
+\pagestyle{empty} % no header/footer -- avoids multi-column header blocks that confuse ATS parsers
+
+\setlength{\parindent}{0pt}
+
+% Strip LaTeX's built-in section spacing entirely -- \ressection below controls all spacing itself
+\titleformat{\section}{\normalfont\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+% Section headers: plain uppercase text + rule, single column, no icons/graphics
+\newcommand{\ressection}[1]{%
+	\vspace{1.5mm}
+	\section*{#1}
+	\vspace{0.5mm}
+	\hrule
+	\vspace{1mm}
+}
+
+\newenvironment{myitemize}
+{ \begin{itemize}[label={\textbullet}, leftmargin=*, topsep=1pt, partopsep=0pt, itemsep=1pt, parsep=0pt] }
+	{ \end{itemize}                  }
+
+\begin{document}
+
+\begin{center}
+	{\LARGE \textbf{Ivan Sepulveda}}\\[3pt]
+	\href{mailto:iesepulveda@outlook.com}{iesepulveda@outlook.com} ~|~ +1-714-724-4958 ~|~ \href{https://www.linkedin.com/in/ivansepulveda/}{linkedin.com/in/ivansepulveda/} ~|~ \href{https://github.com/ivan-sepulveda}{github.com/ivan-sepulveda}
+\end{center}
+
+\ressection{PROFESSIONAL SUMMARY}
+Data analytics leader with 7+ years building automated reporting, KPI frameworks, and predictive models that measure partner and channel performance and guide commercial decisions. Designs SQL data pipelines and dashboards in Snowflake, dbt, and Airflow, and turns multi-source data into clear recommendations. Partners with Sales, Credit, Operations, and Data Engineering and presents findings to senior leadership.
+
+\ressection{EDUCATION}
+\noindent\textbf{University of San Francisco} \\
+\textit{Bachelor of Science - Physics}
+
+\ressection{EXPERIENCE}
+
+\noindent\textbf{Manager of Analytics, Counterparty Risk} \hfill \textbf{February 2026 -- Present} \\
+\textit{Aqua Finance, Inc.} \hfill \textit{Remote}
+\begin{myitemize}
+	\item Built KPI frameworks, early-warning indicators, and predictive models to monitor performance and risk across the dealer partner network and loan applications
+	\item Developed automated SQL/Python pipelines, recurring reports, and dashboards that improved the timeliness, accuracy, and consistency of monthly portfolio monitoring and are distributed to cross-functional stakeholders
+	\item Partner with Sales, Credit, Operations, Underwriting, and Data Engineering to translate requirements into scalable solutions; manage and mentor a Junior Analyst
+\end{myitemize}
+
+\noindent\textbf{Sr. Risk Analyst} \hfill \textbf{June 2021 -- February 2026} \\
+\textit{Solar Mosaic LLC} \hfill \textit{Remote/Oakland, CA}
+\begin{myitemize}
+	\item Built dynamic partner performance and risk scorecards, daily-updating Snowflake schemas, and automated alerts with Data Engineering (dbt, Airflow, AWS)
+	\item Built an XGBoost model predicting each dealer's offboarding probability at 3-, 6-, and 12-month horizons, enabling proactive partner management
+	\item Developed SQL/Gephi network analysis of IP, geographic, and business-registration data to uncover hidden relationships among connected entities
+\end{myitemize}
+
+\noindent\textbf{Lead Software Developer (Contract)} \hfill \textbf{October 2019 -- June 2021} \\
+\textit{L-Egant Solutions, LLC} \hfill \textit{Irvine, CA}
+\begin{myitemize}
+	\item Developed Python tools for high-frame-rate camera control and quantitative image analysis (pixel intensity, 2D Gaussian fitting)
+\end{myitemize}
+
+\noindent\textbf{Data Analyst, Portfolio \& Servicing Risk} \hfill \textbf{August 2019 -- June 2021} \\
+\textit{Mechanics Bank Auto Finance} \hfill \textit{Irvine, CA}
+\begin{myitemize}
+	\item Built Random Forest models to forecast portfolio losses for financial planning and inform credit policy
+	\item Applied K-means and hierarchical clustering to segment collection-agent performance and identify drivers of underperformance
+\end{myitemize}
+
+\ressection{PROJECTS}
+
+\noindent\textbf{when-where} \hfill \href{https://travel.iesepulveda.com}{travel.iesepulveda.com} \\
+\textit{Full-Stack Travel Destination Recommendation Engine}
+\begin{myitemize}
+	\item \textbf{Data Sources:} REST APIs (World Bank Data360, Eurostat, Open-Meteo, Overpass) and web scraping (MICHELIN Guide) to build destination-scoring datasets
+	\item \textbf{Pipeline:} Python ETL to clean, merge, and reconcile heterogeneous structured/unstructured data (weather, economic, crime, tourism) across inconsistent country/city coding schemes
+\end{myitemize}
+
+
+
+\ressection{SKILLS}
+\noindent\textbf{Languages \& Libraries:} Python, SQL, R, pandas, scikit-learn, Jupyter, Matplotlib, ggplot2 \\
+\textbf{Tools \& Platforms:} Excel (advanced), Tableau, Power BI, Salesforce, PowerPoint, Snowflake, dbt, Airflow, AWS, GitHub \\
+\textbf{Methods:} KPI Reporting, Forecasting, Experimental Design, Hypothesis Testing, Segmentation, XGBoost, Random Forest, Network Analysis
+
+\ressection{PUBLICATIONS}
+{\small
+\begin{myitemize}
+	\item C. T. Chavez et al., "Measurement of 2D density profiles using a second-harmonic, dispersion interferometer," \url{https://doi.org/10.1063/5.0119896}
+	\item M. Nikolic et al., "Applicability of optical emission spectroscopy techniques for characterization of Ar and Ar/O2 discharges," \url{https://dx.doi.org/10.1088/1361-6463/abf61c}
+\end{myitemize}
+}
+
+\end{document}

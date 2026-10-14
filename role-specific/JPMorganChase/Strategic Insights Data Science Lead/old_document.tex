@@ -1,0 +1,170 @@
+\documentclass[11pt,a4paper]{article}
+%\usepackage{multicol} % Include the multicol package
+\usepackage{multicol}
+
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber]{biblatex} % or backend=bibtex
+
+\usepackage{fontawesome} % Include the package at the beginning of your document
+\usepackage[super]{nth}
+
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+\usepackage[
+left=0.85in,
+right=0.85in,
+top=0.80in,
+bottom=1in,
+headheight=26pt,
+footskip=0.65in,
+voffset=0.5cm
+]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{26pt} % Make sure this matches the geometry package headheight
+\lhead{Ivan Sepulveda \\ \href{mailto:iesepulveda@outlook.com}{iesepulveda@outlook.com} \\+1-714-724-4958}
+\rhead{\href{https://github.com/ivan-sepulveda//}{\faGithub\ github.com/ivan-sepulveda} \\ \href{https://linkedin.com/in/ivansepulveda/}{\faLinkedin\ linkedin.com/in/ivansepulveda/} \\ \ }
+
+
+%%
+
+\lfoot{Ivan Sepulveda}
+\rfoot{Page \thepage\ of 1\\}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\parindent}{0pt}
+
+\newenvironment{myitemize}
+{ \begin{itemize}[label={--}, leftmargin=*]
+		\setlength{\itemsep}{0pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\parsep}{0pt}     }
+	{ \end{itemize}                  } 
+
+\begin{document}
+	
+
+\section*{Education}
+	\vspace{-8mm} % Adjust the value as needed to reduce the space above the line
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+	\textbf{University of San Francisco} \hfill Bachelor of Science - Physics \\
+
+		\vspace{-10mm} % Adjust the value as needed to reduce the space above the line
+
+	\section*{Experience}
+	\vspace{-4mm} % Adjust the value as needed to reduce the space above the line
+	\hrule
+	\vspace{2mm} % Adjust the value as needed to reduce the space above the line
+	
+	
+	
+\subsection*{Aqua Finance, Inc. - Remote \hfill
+	\vspace{-1mm}
+	\normalfont{\textit{February 2026 - Present} } }
+\vspace{-1.5mm}
+\textit{Manager of Analytics, Counterparty Risk}
+\vspace{-2.5mm}
+\begin{myitemize}
+	\item Built counterparty risk frameworks, KPIs, early-warning indicators, and predictive models to monitor credit and fraud risk across dealers and applications
+	\item Manage and mentor a Junior Analyst, and partner with Credit, Operations, Sales, Underwriting, and Data Engineering to translate business needs into scalable risk monitoring solutions
+	\item Develop automated SQL/Python analytics pipelines and reporting, improving timeliness, consistency, and scalability of portfolio risk monitoring
+\end{myitemize}
+	
+
+
+		\vspace{-7mm} % Adjust the value as needed to reduce the space above the line
+	\subsection*{Solar Mosaic LLC - Remote/Oakland, CA \hfill
+	\vspace{-1mm}
+	\normalfont{\textit{June 2021 - February 2026} } }
+\vspace{-1.5mm}
+\textit{Sr. Risk Analyst}
+\vspace{-2.5mm}
+\begin{myitemize}
+	\item Developed SQL/Gephi network analysis using IP, geographic, and business-registration data to identify risk and fraud among connected entities
+\item Built an XGBoost dealer offboarding model to predict each dealer's probability of becoming offboarded at different time horizons (3M, 6M, 12M)
+	\item Implemented dynamic partner risk scorecards, daily-updating schemas, alerts, and data initiatives with Data Engineering using \texttt{DBT, Apache Airflow, AWS, Snowflake}
+\end{myitemize}
+		\vspace{-7mm} % Adjust the value as needed to reduce the space above the line
+	\subsection*{L-Egant Solutions, LLC - Irvine, CA \hfill
+					\vspace{-1mm} % Adjust the value as needed to reduce the space above the line
+		 \normalfont{\textit{October 2019 - June 2021} } }
+	\vspace{-1.5mm} % Adjust the value as needed to reduce the space above the line
+	\textit{Lead Software Developer [Contract]}
+	\vspace{-2.5mm} % Adjust the value as needed to reduce the space above the line
+\begin{myitemize}
+	\item Developed scripts and GUI software for high-frame-rate camera operation, video capture, image algebra, pixel-intensity analysis, and two-dimensional Gaussian characterization
+\end{myitemize}
+		\vspace{-7mm} % Adjust the value as needed to reduce the space above the line
+	\subsection*{Mechanics Bank Auto Finance - Irvine, CA \hfill
+					\vspace{-1mm} % Adjust the value as needed to reduce the space above the line
+		 \normalfont{\textit{August 2019 - June 2021} } }
+	\vspace{-1.5mm} % Adjust the value as needed to reduce the space above the line
+	\textit{Data Analyst - Portfolio \& Servicing Risk}
+	\vspace{-2.5mm} % Adjust the value as needed to reduce the space above the line
+	\begin{myitemize}
+		\item Applied K-means, hierarchical clustering, and Random Forest models to segment collection agents, analyze credit metrics, inform credit policy, and forecast portfolio losses
+	\end{myitemize}
+		\vspace{-8mm} % Adjust the value as needed to reduce the space above the line
+
+	\section*{Projects}
+	\vspace{-4mm} % Adjust the value as needed to reduce the space above the line
+	\hrule
+	\vspace{3mm} % Adjust the value as needed to reduce the space above the line
+
+	\subsection*{when-where \hfill \normalfont{\textit{2026}}}
+	\vspace{-1.5mm}
+	\textit{Full-Stack Travel Recommendation Engine} \hfill \href{https://travel.iesepulveda.com}{travel.iesepulveda.com}
+	\vspace{-2.5mm}
+	\begin{myitemize}
+\item \textbf{Data Sources:} REST APIs (World Bank Data360, Eurostat, Open-Meteo, Overpass) and web scraping (MICHELIN Guide) to build destination-scoring datasets
+\item \textbf{Pipeline:} Python ETL to clean, merge, and reconcile heterogeneous structured/unstructured data (weather, economic, crime, tourism) across inconsistent country/city coding schemes
+	\end{myitemize}
+		\vspace{-6mm} % Adjust the value as needed to reduce the space above the line
+
+	\subsection*{dft (Duty Free Tracker) \hfill \normalfont{\textit{2026}}}
+	\vspace{-1.5mm}
+	\textit{Full-Stack Airport Shopping Data Platform} \hfill \href{https://dft.iesepulveda.com}{dft.iesepulveda.com}
+	\vspace{-2.5mm}
+	\begin{myitemize}
+\item \textbf{Frontend:} Next.js/TypeScript --- user login, favorites, interactive maps, image upload
+\item \textbf{Backend:} Supabase/Postgres --- relational schema (Airport, Store, Sighting, Product, Brand)
+	\end{myitemize}
+		\vspace{-6mm} % Adjust the value as needed to reduce the space above the line
+
+
+
+	\section*{Publications}
+	\vspace{-3mm} % Adjust the value as needed to reduce the space above the line
+	
+	\hrule
+	\vspace{2mm} % Adjust the value as needed to reduce the space above the line
+	
+	[1] C. T. Chavez et al., "Measurement of 2D density profiles using a second-harmonic, dispersion interferometer," https://doi.org/10.1063/5.0119896 \newline
+	[2] M. Nikolic et al., "Applicability of optical emission spectroscopy techniques for characterization of Ar and Ar/O2 discharges," https://dx.doi.org/10.1088/1361-6463/abf61c
+%	\input{publications}
+	
+
+		\vspace{-4mm} % Adjust the value as needed to reduce the space above the line
+	\section*{Skills}
+	\vspace{-3mm} % Adjust the value as needed to reduce the space above the line
+	\hrule
+	\vspace{2mm} % Adjust the value as needed to reduce the space above the line
+\begin{myitemize}
+	\item \textbf{Languages \& Libraries:} Python, SQL, R, LaTeX, Java, Matplotlib, Mayavi, ggplot2, Tableau, pandas, scikit-learn, 
+	\item \textbf{Tools \& Platforms:} DBT, Airflow, Docker, AWS, Snowflake, GitHub, Bitbucket, Gephi
+	\item \textbf{Methods:} Web Scraping, Network Analysis, Monte Carlo Simulations, XGBoost, Random Forest, KNN/K-Means
+\end{myitemize}
+	
+	
+\end{document}
